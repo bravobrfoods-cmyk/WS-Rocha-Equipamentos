@@ -28,3 +28,8 @@ if(coverVideo){
  new IntersectionObserver(entries=>{inView=entries[0].isIntersecting;updateVideo()},{threshold:.05}).observe(coverVideo.closest('.hero'));
  updateVideo();
 }
+
+const siteHeader=document.querySelector('.header');
+function updateHeaderSurface(){siteHeader.classList.toggle('is-scrolled',window.scrollY>24)}
+window.addEventListener('scroll',updateHeaderSurface,{passive:true});
+updateHeaderSurface();

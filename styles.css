@@ -53,3 +53,13 @@
  .footer-main{grid-template-columns:1fr}.footer-main>div:last-child{grid-column:auto}.footer-links{grid-template-columns:1fr 1fr}
 }
 @media(max-height:500px) and (max-width:1000px){nav{grid-template-columns:repeat(3,1fr)}.hero-video .hero-grid{padding-top:28px;padding-bottom:30px}}
+
+/* Full-screen video cover, with navigation layered over it. */
+.header{position:fixed;inset:0 0 auto;background:transparent;border-bottom:1px solid #ffffff22;color:white;transition:background .2s,border-color .2s,box-shadow .2s}
+.header.is-scrolled{background:var(--navy-deep);border-bottom-color:#ffffff18;box-shadow:0 4px 16px #06121b18}
+.header .brand-dot{color:var(--accent)}.header nav a:hover{color:var(--accent)}
+.hero-video .hero-grid{min-height:100vh;min-height:100svh;display:flex;align-items:center;padding-top:125px;padding-bottom:56px}
+.hero-video .hero-copy{width:100%}
+@media(max-width:1000px){.header .menu-toggle{color:white;border-color:#ffffff65;background:#10273733}.header nav{background:var(--navy-deep);color:white;border-bottom-color:#ffffff22}}
+@media(max-width:700px){.hero-video .hero-grid{min-height:100vh;min-height:100svh;padding-top:104px;padding-bottom:40px;display:flex;align-items:center}.hero-video .hero-copy{padding:0}.hero-video .hero-background-video{object-position:60% center}}
+@media(max-height:500px) and (max-width:1000px){.hero-video .hero-grid{padding-top:104px;padding-bottom:32px}}
